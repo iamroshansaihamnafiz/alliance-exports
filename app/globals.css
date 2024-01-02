@@ -1,0 +1,64 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,700,400,600,300,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Clash Grotesk', sans-serif !important;
+    background: #eeeeee59;
+}
+
+p {
+    font-family: 'Inter', sans-serif !important;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.active {
+    color: #1da1f2 !important;
+}
+
+#mobile_menu .active {
+    color: #1da1f2;
+}
+
+/* Mobile Menu */
+#mobile_menu {
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    transition: 0.3s ease-in-out;
+}
+
+.show_menu {
+    left: 0 !important;
+}
+
+/* Button Design */
+.button {
+    padding: 10px 20px;
+    color: white;
+    background: #1da1f2;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.button-two {
+    padding: 10px 20px;
+    color: #1da1f2;
+    background: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif !important;
+}
+.tag span{
+    font-family: 'Inter', sans-serif !important;
+}
