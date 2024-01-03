@@ -529,8 +529,10 @@ export default function Home() {
                         </div>
 
                         <div className="my-4 col space-y-3">
-                            <Link href='/' className="text-white hover:text-primary font-[500] block">About Us</Link>
-                            <Link href='/' className="text-white hover:text-primary font-[500] block">About Us</Link>
+                            <Link href='/' className="text-white hover:text-primary font-[500] block">Home</Link>
+                            <Link href='/' className="text-white hover:text-primary font-[500] block">About</Link>
+                            <Link href='product-detail' className="text-white hover:text-primary font-[500] block">Seafood</Link>
+                            <Link href='/' className="text-white hover:text-primary font-[500] block">Wines</Link>
                         </div>
 
                         <div className="my-4 col space-y-3">
