@@ -33,6 +33,7 @@ import PDImage6 from '../public/assets/images/pd6.png';
 
 import BtmImage from '../public/assets/images/btm.jpg';
 import BgMapImage from '../public/assets/images/bg-map.png';
+import BgWaveImage from '../public/assets/images/wave.png';
 
 
 export default function Home() {
@@ -73,7 +74,7 @@ export default function Home() {
                                               className="active font-[500] hover:text-primary transition">Home</Link>
                                         <Link href='/'
                                               className="text-black font-[500] hover:text-primary transition">About</Link>
-                                        <Link href='/'
+                                        <Link href='product-detail'
                                               className="text-black font-[500] hover:text-primary transition">Seafood</Link>
                                         <Link href='/'
                                               className="text-black font-[500] hover:text-primary transition">Wines</Link>
@@ -121,7 +122,8 @@ export default function Home() {
                         <Link href='/' className="block text-black font-[500] hover:text-primary transition">
                             About
                         </Link>
-                        <Link href='/' className="block text-black font-[500] hover:text-primary transition">
+                        <Link href='product-detail'
+                              className="block text-black font-[500] hover:text-primary transition">
                             Seafood
                         </Link>
                         <Link href='/' className="block text-black font-[500] hover:text-primary transition">
@@ -146,6 +148,7 @@ export default function Home() {
                         style={{
                             backgroundImage: `linear-gradient(0deg, rgb(21 20 20 / 52%), rgb(0 0 0 / 54%)),url(${HeroImage.src})`,
                             height: '100vh',
+                            backgroundPosition: 'center',
                         }}
                     >
                         <div className="h-full w-full overflow-hidden bg-fixed">
@@ -181,10 +184,16 @@ export default function Home() {
             </section>
 
             {/* Journey Section */}
-            <section id="journey-section">
-                <div className="container pt-20">
+            <section id="journey-section" className="mt-0">
+                <div className="container pt-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="col text-area">
+                        <div className="col text-area h-full flex flex-col justify-center"
+                             style={{
+                                 backgroundImage: `linear-gradient(0deg, rgb(128 122 122 / 0%), rgb(243 230 230 / 11%)),url(${BgWaveImage.src})`,
+                                 backgroundPosition: '0% 0%',
+                                 backgroundRepeat: 'no-repeat',
+                             }}
+                        >
                             <div className="tag">
                                 <span
                                     className="bg-[#D6ECF9] text-xs font-[500] rounded-lg py-2 px-4">Our Journey</span>
@@ -236,7 +245,7 @@ export default function Home() {
                 <div className="container mt-10">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PImage1} className="w-full" alt="PImage1"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Southern Rock
@@ -249,7 +258,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PImage2} className="w-full" alt="PImage2"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Eastern King
@@ -262,7 +271,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PImage3} className="w-full" alt="PImage3"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Queensland
@@ -275,7 +284,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PImage4} className="w-full" alt="PImage4"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Coral Trout</h2>
@@ -287,7 +296,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PImage5} className="w-full" alt="PImage5"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Blue Swimmer
@@ -300,7 +309,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PImage6} className="w-full" alt="PImage6"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Moreton Bay
@@ -334,7 +343,7 @@ export default function Home() {
                 <div className="container mt-10">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PDImage1} className="w-full" alt="PDImage1"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Mystery Shiraz A
@@ -347,7 +356,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PDImage2} className="w-full" alt="PDImage2"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Starrs Reach
@@ -360,7 +369,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PDImage3} className="w-full" alt="PDImage3"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Brokenwood
@@ -373,7 +382,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PDImage4} className="w-full" alt="PDImage4"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Stonehaven
@@ -386,7 +395,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PDImage5} className="w-full" alt="PDImage5"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Willow Bridge
@@ -399,7 +408,7 @@ export default function Home() {
                         </div>
 
                         <div className="col mt-6 product-box">
-                            <Link href="/">
+                            <Link href="product-detail">
                                 <Image src={PDImage6} className="w-full" alt="PDImage6"/>
                                 <div className="mt-3 flex items-center justify-between px-2">
                                     <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Taylors Promised
@@ -433,13 +442,12 @@ export default function Home() {
             </section>
 
             {/* Connect Section */}
-            <section id="connect-section">
-                <div className="container-full pt-10">
-                    <div className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12"
-                         style={{
-                             backgroundImage: `linear-gradient(0deg, rgb(255 255 255 / 80%), rgb(247 247 247 / 83%)),url(${BgMapImage.src})`,
-                         }}>
-
+            <section id="connect-section"
+                     style={{
+                         backgroundImage: `linear-gradient(0deg, rgb(255 255 255 / 80%), rgb(247 247 247 / 83%)),url(${BgMapImage.src})`,
+                     }}>
+                <div className="container pt-10">
+                    <div className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat py-12">
                         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
                             <div className="col">
                                 <div className="text-area">

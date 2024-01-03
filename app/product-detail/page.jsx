@@ -63,7 +63,7 @@ function Page(props) {
                                               className="text-black font-[500] hover:text-primary transition">Home</Link>
                                         <Link href='/'
                                               className="text-black font-[500] hover:text-primary transition">About</Link>
-                                        <Link href='/'
+                                        <Link href='product-detail'
                                               className="text-black font-[500] hover:text-primary transition">Seafood</Link>
                                         <Link href='/'
                                               className="text-black font-[500] hover:text-primary transition">Wines</Link>
@@ -111,7 +111,8 @@ function Page(props) {
                         <Link href='/' className="block text-black font-[500] hover:text-primary transition">
                             About
                         </Link>
-                        <Link href='/' className="block text-black font-[500] hover:text-primary transition">
+                        <Link href='product-detail'
+                              className="block text-black font-[500] hover:text-primary transition">
                             Seafood
                         </Link>
                         <Link href='/' className="block text-black font-[500] hover:text-primary transition">
@@ -255,7 +256,7 @@ function Page(props) {
                         <SwiperSlide>
                             <div className="slider-content">
                                 <div className="col mt-6 product-box">
-                                    <Link href="#">
+                                    <Link href="product-detail">
                                         <Image src={PImage1} className="w-full" alt="PImage1"/>
                                         <div className="mt-3 flex items-center justify-between px-2">
                                             <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Southern
@@ -272,7 +273,7 @@ function Page(props) {
 
                         <SwiperSlide>
                             <div className="col mt-6 product-box">
-                                <Link href="#">
+                                <Link href="product-detail">
                                     <Image src={PImage2} className="w-full" alt="PImage2"/>
                                     <div className="mt-3 flex items-center justify-between px-2">
                                         <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Eastern King
@@ -287,7 +288,7 @@ function Page(props) {
 
                         <SwiperSlide>
                             <div className="col mt-6 product-box">
-                                <Link href="#">
+                                <Link href="product-detail">
                                     <Image src={PImage3} className="w-full" alt="PImage3"/>
                                     <div className="mt-3 flex items-center justify-between px-2">
                                         <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Queensland
@@ -302,7 +303,7 @@ function Page(props) {
 
                         <SwiperSlide>
                             <div className="col mt-6 product-box">
-                                <Link href="#">
+                                <Link href="product-detail">
                                     <Image src={PImage4} className="w-full" alt="PImage4"/>
                                     <div className="mt-3 flex items-center justify-between px-2">
                                         <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Coral
@@ -317,7 +318,7 @@ function Page(props) {
 
                         <SwiperSlide>
                             <div className="col mt-6 product-box">
-                                <Link href="#">
+                                <Link href="product-detail">
                                     <Image src={PImage5} className="w-full" alt="PImage5"/>
                                     <div className="mt-3 flex items-center justify-between px-2">
                                         <h2 className="font-semibold text-[18px] sm:text-[17px] md:text-xl">Blue Swimmer
@@ -335,13 +336,12 @@ function Page(props) {
             </section>
 
             {/* Connect Section */}
-            <section id="connect-section">
-                <div className="container-full pt-10">
-                    <div className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12"
-                         style={{
-                             backgroundImage: `linear-gradient(0deg, rgb(255 255 255 / 80%), rgb(247 247 247 / 83%)),url(${BgMapImage.src})`,
-                         }}>
-
+            <section id="connect-section"
+                     style={{
+                         backgroundImage: `linear-gradient(0deg, rgb(255 255 255 / 80%), rgb(247 247 247 / 83%)),url(${BgMapImage.src})`,
+                     }}>
+                <div className="container pt-10">
+                    <div className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat py-12">
                         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
                             <div className="col">
                                 <div className="text-area">
@@ -380,18 +380,28 @@ function Page(props) {
                                         <div className="mb-4">
                                             <input
                                                 className="appearance-none border rounded-md w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                                id="username" type="text" placeholder="Your Name"/>
+                                                id="name"
+                                                name="name"
+                                                type="text" placeholder="Your Name"/>
 
                                             <input
                                                 className="mt-3 appearance-none border rounded-md w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                                id="username" type="email" placeholder="Your Mail"/>
+                                                id="email"
+                                                name="email"
+                                                type="email" required placeholder="Your Mail"/>
 
                                             <input
                                                 className="mt-3 appearance-none border rounded-md w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                                id="username" type="number" required placeholder="Your Number"/>
+                                                id="phone"
+                                                name="phone"
+                                                type="text" placeholder="Your Number"/>
 
-                                            <textarea name="message" id="message" rows="5" placeholder="How Can We Help"
-                                                      className="mt-3 appearance-none border rounded-md w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                                            <textarea
+                                                className="mt-3 appearance-none border rounded-md w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                id="message"
+                                                name="message"
+                                                placeholder="How Can We Help"
+                                            ></textarea>
                                             <button type="submit" className="button mt-4 w-full">
                                                 Contact Us
                                             </button>
