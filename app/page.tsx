@@ -147,7 +147,7 @@ export default function Home() {
                         className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12"
                         style={{
                             backgroundImage: `linear-gradient(0deg, rgb(21 20 20 / 52%), rgb(0 0 0 / 54%)),url(${HeroImage.src})`,
-                            height: '100vh',
+                            // height: '100vh',
                             backgroundPosition: 'center',
                         }}
                     >
@@ -184,16 +184,17 @@ export default function Home() {
             </section>
 
             {/* Journey Section */}
-            <section id="journey-section" className="mt-0">
+            <section id="journey-section" className="mt-0"
+                     style={{
+                         backgroundImage: `linear-gradient(0deg, rgb(128 122 122 / 0%), rgb(243 230 230 / 11%)),url(${BgWaveImage.src})`,
+                         backgroundPosition: '0% 0%',
+                         backgroundRepeat: 'no-repeat',
+                         backgroundSize: 'contain',
+                     }}
+            >
                 <div className="container pt-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="col text-area h-full flex flex-col justify-center"
-                             style={{
-                                 backgroundImage: `linear-gradient(0deg, rgb(128 122 122 / 0%), rgb(243 230 230 / 11%)),url(${BgWaveImage.src})`,
-                                 backgroundPosition: '0% 0%',
-                                 backgroundRepeat: 'no-repeat',
-                             }}
-                        >
+                        <div className="col text-area h-full flex flex-col justify-center">
                             <div className="tag">
                                 <span
                                     className="bg-[#D6ECF9] text-xs font-[500] rounded-lg py-2 px-4">Our Journey</span>
@@ -208,7 +209,7 @@ export default function Home() {
                             </p>
                         </div>
 
-                        <div className="col image-area">
+                        <div className="col ml-14 image-area">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="col">
                                     <Image src={BImage1} alt="BImage1"/>
